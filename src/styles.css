@@ -1,0 +1,30 @@
+.linkBtn {
+    display: inline-block;
+    border-radius: 4px;
+    text-transform: none;
+    font-weight: 600;
+    color: rgb(62, 52, 70);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(219, 214, 225);
+    height: 28px;
+    min-height: 28px;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    padding: 6px 8px;
+    box-shadow: rgba(43, 34, 51, 0.04) 0px 1px 4px;
+    cursor: pointer;
+    transition: background 0.1s ease 0s, border 0.1s ease 0s, box-shadow 0.1s ease 0s;
+}
+
+.linkBtn:hover {
+    background: rgb(245, 243, 247);
+    border-color: rgb(219, 214, 225);
+}
+
+.linkBtn .content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+}
