@@ -1,0 +1,92 @@
+.search-container {
+    position: absolute;
+    left: 20000px;
+    width: 500px;
+    border: solid #403030 1px;
+    color: #ddd;
+    z-index: -1000000;
+}
+
+.search-container:focus-within {
+    left: 200px;
+    z-index: 100000;
+}
+
+
+.search-top-container {
+    background: #300000;
+}
+
+.search-top-container > div {
+    font-size: 20px;
+    padding: 8px;
+}
+
+.search-top-container > div:hover,
+.search-top-container > div.active {
+    background: #500000;
+    cursor: pointer;
+}
+
+.search-field-container {
+    background: #200000;
+    padding: 10px;
+    border-top: solid #403030 1px;;
+    border-bottom: solid #403030 1px;;
+}
+
+.search-field-container input[type="text"],
+.search-field-container input[type="text"]:focus-visible {
+    color: #eee;
+    background: #200000;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+.content-container {
+    background: #300000;
+}
+
+.content-container > div {
+    padding: 6px 10px;
+}
+
+.content-container > div:hover {
+    cursor: pointer;
+    background: #200000;
+}
+
+.content-container > div > span.typespan {
+    color: grey;
+    float: right;
+}
+
+span.fuzzyhightlight {
+    color: #ff9900;
+}
+
+
+.datanav-label {
+    position: fixed;
+    right: -730px;
+    top: 30px;
+    padding: 4px;
+    background: aliceblue;
+    border: black solid 2px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /*width: 500px;*/
+}
+
+.datanav-label:focus-within {
+    right: 50%;
+    top: 20%;
+    transform: translate(50%, -50%);
+    border: rebeccapurple solid 2px;
+}
+
+input#datanav-input {
+    width: 500px;
+    /*width: 700px;*/
+}

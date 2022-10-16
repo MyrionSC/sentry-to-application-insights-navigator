@@ -1,0 +1,16 @@
+<div class="search-container">
+    <div class="search-top-container" style="display: flex">
+        <div data-type="all" onclick="topClick(event)">All</div>
+        <div data-type="symbol" onclick="topClick(event)">Symbols</div>
+        <div data-type="file" class="active" onclick="topClick(event)">Files</div>
+        <div data-type="job" onclick="topClick(event)">Jobs</div>
+    </div>
+    <div class="search-field-container">
+        <input onkeydown="chooseContent(event)" oninput="filterContent()" type="text" content="Some Searchterm..." placeholder="Some placeholder">
+    </div>
+    <div class="content-container"></div>
+    
+    <link rel="stylesheet" href="../styles/databricks-navigator.css">
+    <script src="fuzzysort.js"></script>
+    <script src="searchLogic.js"></script>
+</div>

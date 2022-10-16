@@ -1,0 +1,36 @@
+{
+  "name": "Databricks navigator",
+  "description": "Easier navigation in databricks",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": [
+    "scripting"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.azuredatabricks.net/*"
+      ],
+      "js": [
+        "contentLoader.js"
+      ],
+      "css": [
+        "src/styles/databricks-navigator.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "src/script.js",
+        "src/navigatorElement/navigator.html",
+        "src/navigatorElement/fuzzysort.js",
+        "src/navigatorElement/searchLogic.js"
+      ],
+      "matches": [
+        "https://*.azuredatabricks.net/*"
+      ]
+    }
+  ]
+}
