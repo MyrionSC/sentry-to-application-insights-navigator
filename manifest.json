@@ -1,6 +1,6 @@
 {
-  "name": "Databricks navigator",
-  "description": "Easier navigation in databricks",
+  "name": "Sentry to Application Insights linker",
+  "description": "Creates button in Sentry with link to Application Insights transaction",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
@@ -9,13 +9,13 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.azuredatabricks.net/*"
+        "https://sentry.io/organizations/airmaster-as/issues/*"
       ],
       "js": [
         "contentLoader.js"
       ],
       "css": [
-        "src/styles/databricks-navigator.css"
+        "src/styles.css"
       ],
       "run_at": "document_idle"
     }
@@ -23,13 +23,10 @@
   "web_accessible_resources": [
     {
       "resources": [
-        "src/script.js",
-        "src/navigatorElement/navigator.html",
-        "src/navigatorElement/fuzzysort.js",
-        "src/navigatorElement/searchLogic.js"
+        "src/script.js"
       ],
       "matches": [
-        "https://*.azuredatabricks.net/*"
+        "https://sentry.io/organizations/airmaster-as/issues/*"
       ]
     }
   ]
