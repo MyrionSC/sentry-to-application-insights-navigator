@@ -18,12 +18,30 @@
         "src/styles.css"
       ],
       "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://portal.azure.com/*"
+      ],
+      "js": [
+        "contentLoaderAI.js"
+      ],
+      "css": [],
+      "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
       "resources": [
         "src/scriptSentry.js"
+      ],
+      "matches": [
+        "https://*/*"
+      ]
+    },
+    {
+      "resources": [
+        "src/scriptAI.js"
       ],
       "matches": [
         "https://*/*"

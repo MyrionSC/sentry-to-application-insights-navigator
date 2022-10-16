@@ -6,8 +6,9 @@ function addButtonIfTransactionInMessage() {
     if (matchRes) {
         console.log(matchRes[0])
 
+        const applicationInsightsSearchUrl = "REPLACE"
         const html = `
-            <a class="linkBtn" href="https://portal.azure.com/#@AirmasterAS.onmicrosoft.com/resource/subscriptions/30a95655-48bf-45e0-9c40-d60a8b99d38c/resourceGroups/rg-airlinq-airmaster-prod-1/providers/microsoft.insights/components/appi-airlinq-airmaster-prod-1/searchV1" target="_blank">
+            <a class="linkBtn" href="${applicationInsightsSearchUrl}?searchTerm=${matchRes[0]}" target="_blank">
                 <span class="content">Follow Transaction</span>
             </a>
         `;
