@@ -4,48 +4,26 @@
   "version": "1.0",
   "manifest_version": 3,
   "permissions": [
+    "activeTab",
+    "contextMenus",
+    "storage",
     "scripting"
   ],
   "content_scripts": [
     {
       "matches": [
+        "https://airmaster-as.sentry.io/issues/*",
         "https://sentry.io/organizations/airmaster-as/issues/*"
       ],
-      "js": [
-        "contentLoaderSentry.js"
-      ],
-      "css": [
-        "src/styles.css"
-      ],
-      "run_at": "document_idle"
-    },
-    {
-      "matches": [
-        "https://portal.azure.com/*"
-      ],
-      "js": [
-        "contentLoaderAI.js"
-      ],
-      "css": [],
+      "js": ["contentLoaderSentry.js"],
+      "css": ["src/styles.css"],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": [
-        "src/scriptSentry.js"
-      ],
-      "matches": [
-        "https://*/*"
-      ]
-    },
-    {
-      "resources": [
-        "src/scriptAI.js"
-      ],
-      "matches": [
-        "https://*/*"
-      ]
+      "resources": ["src/scriptSentry.js"],
+      "matches": ["https://*/*"]
     }
   ]
 }
