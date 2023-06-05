@@ -1,10 +1,10 @@
 console.log("=== contentLoaderAI.js")
 
-var s = document.createElement('script');
-s.src = chrome.runtime.getURL('src/scriptAI.js');
-(document.head || document.documentElement).appendChild(s);
+const s = document.createElement('script')
+s.src = chrome.runtime.getURL('src/scriptSentry.js')
+(document.head || document.documentElement).appendChild(s)
 
 s.onload = function () {
-    this.remove();
+    this.remove()
 };
 
